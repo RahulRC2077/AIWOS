@@ -13,89 +13,120 @@
 
 <style>
 body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: #0A0F1C;
-    color: #ffffff;
-    overflow-x: hidden;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #050814;
+  color: #ffffff;
+  overflow-x: hidden;
 }
 
 #particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: radial-gradient(circle at center, #0c1224 0%, #050814 100%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(0,242,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,242,255,0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: -3;
 }
 
 section {
-    padding: 100px 10%;
+  padding: 100px 10%;
 }
 
-h1, h2 {
-    font-weight: 800;
+h1, h2, h3 {
+  font-weight: 800;
 }
 
 h1 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
+  font-size: 2rem;
 }
 
 .hero {
-    text-align: center;
-    padding-top: 150px;
+  text-align: center;
+  padding-top: 150px;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    opacity: 0.8;
+  font-size: 1.2rem;
+  opacity: 0.85;
+  max-width: 800px;
+  margin: 20px auto;
 }
 
 .btn {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 12px 30px;
-    background: #00f2ff;
-    color: #000;
-    border-radius: 30px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.3s ease;
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 30px;
+  background: #00f2ff;
+  color: #000;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
 }
 
 .btn:hover {
-    box-shadow: 0 0 20px #00f2ff;
-    transform: translateY(-3px);
+  box-shadow: 0 0 20px #00f2ff;
+  transform: translateY(-3px);
+}
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background: #00f2ff;
+  margin: 20px 0 40px;
+  box-shadow: 0 0 20px #00f2ff;
 }
 
 .card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
 }
 
-.card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-    border-radius: 16px;
-    padding: 30px;
-    transition: 0.3s ease;
-    border: 1px solid rgba(0, 242, 255, 0.2);
+.case-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 18px;
+  padding: 40px;
+  border: 1px solid rgba(0, 242, 255, 0.2);
+  transition: 0.3s ease;
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 25px rgba(0, 242, 255, 0.4);
+.case-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 35px rgba(0, 242, 255, 0.4);
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+  opacity: 0.85;
 }
 
 footer {
-    text-align: center;
-    padding: 40px;
-    opacity: 0.6;
-    font-size: 0.9rem;
+  text-align: center;
+  padding: 40px;
+  opacity: 0.6;
+  font-size: 0.9rem;
 }
 </style>
 </head>
@@ -105,103 +136,133 @@ footer {
 <div id="particles-js"></div>
 
 <section class="hero">
-    <h1>Integrating Intelligence Into Every System</h1>
-    <p>AIWOS builds scalable, production-grade AI systems embedded directly into organizational software.</p>
-    <a href="#cases" class="btn">Explore Our Systems</a>
+  <h1>Integrating Intelligence Into Organizational Software</h1>
+  <p>
+    AIWOS builds scalable, secure, production-grade AI systems embedded directly
+    into enterprise workflows. Intelligence is not an add-on. It is the architecture.
+  </p>
+  <a href="#cases" class="btn">Explore Systems</a>
 </section>
 
 <section>
-    <h2>The Problem</h2>
-    <div class="card-container">
-        <div class="card">AI remains stuck in demo environments.</div>
-        <div class="card">Organizations lack production AI expertise.</div>
-        <div class="card">Security and cost control issues.</div>
-        <div class="card">Disconnected AI tools with no integration.</div>
-    </div>
+  <h2>The Problem</h2>
+  <div class="divider"></div>
+  <div class="card-container">
+    <div class="case-card">AI remains confined to demo environments.</div>
+    <div class="case-card">Organizations lack production AI architecture expertise.</div>
+    <div class="case-card">Disconnected AI tools with no workflow integration.</div>
+    <div class="case-card">Security, compliance, and cost control concerns.</div>
+  </div>
 </section>
 
 <section>
-    <h2>Our Solution</h2>
-    <p>AIWOS architects AI-native systems where intelligence is foundational, scalable, secure, and cost-optimized.</p>
+  <h2>Our Solution</h2>
+  <div class="divider"></div>
+  <p>
+    AIWOS engineers AI-native systems where intelligence operates as a structural layer —
+    scalable, secure, cost-optimized, and deeply integrated into organizational software.
+  </p>
 </section>
 
 <section>
-    <h2>Core Capabilities</h2>
-    <div class="card-container">
-        <div class="card">AI Integration (LLMs + Generative Models)</div>
-        <div class="card">Full-Stack AI SaaS Development</div>
-        <div class="card">Secure Auth & Role Systems</div>
-        <div class="card">Cloud-Native Infrastructure</div>
-        <div class="card">AI Analytics & Automation</div>
-        <div class="card">Cost-Optimized AI Architecture</div>
-    </div>
+  <h2>Core Capabilities</h2>
+  <div class="divider"></div>
+  <div class="card-container">
+    <div class="case-card">LLM & Generative AI Integration</div>
+    <div class="case-card">Full-Stack AI SaaS Development</div>
+    <div class="case-card">Role-Based Access & Secure Auth</div>
+    <div class="case-card">Cloud-Native Backend Architecture</div>
+    <div class="case-card">AI Analytics & Automation Pipelines</div>
+    <div class="case-card">Operational Intelligence Dashboards</div>
+  </div>
 </section>
 
 <section id="cases">
-    <h2>Case Study 1 – Nythic AI</h2>
-    <div class="card">
-        AI-powered EdTech platform for Karnataka SSLC students. Curriculum-bound AI tutor, quizzes, flashcards, analytics, parent reporting, role-based security. Built using React, Supabase, Gemini AI.
-    </div>
+  <h2>Case Study — Nythic AI</h2>
+  <div class="divider"></div>
+  <div class="case-card">
+    <p>
+      AI-powered EdTech platform for Karnataka SSLC students.
+      Curriculum-bound AI tutor, quiz generation, flashcards,
+      analytics dashboards, parent reporting, and role-based control.
+    </p>
+  </div>
 </section>
 
 <section>
-    <h2>Case Study 2 – BYTRAS (AI Design Commerce)</h2>
-    <div class="card">
-        AI-powered modular furniture e-commerce platform. AI design studio with prompt-based image generation, dynamic pricing engine, persistent cart, milestone-based payments, admin control system.
-    </div>
+  <h2>Case Study — BYTRAS</h2>
+  <div class="divider"></div>
+  <div class="case-card">
+    <h3>AI-Integrated Commerce Engine</h3>
+    <p>
+      Modular furniture e-commerce ecosystem combining generative AI design,
+      dynamic pricing systems, structured milestone-based payments,
+      and operational intelligence dashboards.
+    </p>
+    <ul>
+      <li>Prompt-driven AI Design Studio</li>
+      <li>Dynamic Pricing Based on Configurations</li>
+      <li>Persistent Cart & Milestone Payment Engine</li>
+      <li>Inventory Optimization Logic</li>
+      <li>Admin Operational Control Dashboard</li>
+      <li>Cloud-native scalable backend</li>
+    </ul>
+    <p>
+      Outcome: Transformed static commerce into an adaptive,
+      intelligence-driven operational system.
+    </p>
+  </div>
 </section>
 
 <section>
-    <h2>Case Study 3 – BYTRAS (AI Operational Engine)</h2>
-    <div class="card">
-        Scalable backend automation with AI-assisted inventory optimization, order workflow automation, milestone tracking dashboards, customer lifecycle analytics, and modular cloud architecture.
-    </div>
+  <h2>Technology Architecture</h2>
+  <div class="divider"></div>
+  <div class="card-container">
+    <div class="case-card">Frontend: React + TypeScript</div>
+    <div class="case-card">Backend: Supabase + PostgreSQL</div>
+    <div class="case-card">AI Model Gateway Integration</div>
+    <div class="case-card">Cloud Storage & Edge Functions</div>
+  </div>
 </section>
 
 <section>
-    <h2>Technology Architecture</h2>
-    <div class="card-container">
-        <div class="card">Frontend: React + TypeScript</div>
-        <div class="card">Backend: Supabase + PostgreSQL</div>
-        <div class="card">AI Gateway Integration</div>
-        <div class="card">Cloud Storage & Edge Functions</div>
-    </div>
-</section>
-
-<section>
-    <h2>Vision</h2>
-    <p>AIWOS enables organizations to evolve from software-driven to intelligence-driven systems.</p>
+  <h2>Vision</h2>
+  <div class="divider"></div>
+  <p>
+    AIWOS enables organizations to transition from software-driven systems
+    to intelligence-driven ecosystems.
+  </p>
 </section>
 
 <footer>
-    © 2026 AIWOS | Artificial Intelligence Integrated with Organization Software
+  © 2026 AIWOS | Artificial Intelligence Integrated with Organization Software
 </footer>
 
 <script>
 particlesJS("particles-js", {
   particles: {
-    number: { value: 80 },
-    size: { value: 3 },
+    number: { value: 70 },
+    size: { value: 2 },
     color: { value: "#00f2ff" },
     line_linked: {
       enable: true,
-      distance: 150,
+      distance: 140,
       color: "#00f2ff",
-      opacity: 0.4,
+      opacity: 0.3,
       width: 1
     },
-    move: { enable: true, speed: 2 }
+    move: { enable: true, speed: 1.5 }
   }
 });
 
 gsap.utils.toArray("section").forEach(section => {
   gsap.from(section, {
     opacity: 0,
-    y: 50,
-    duration: 1,
+    y: 40,
+    duration: 0.8,
     scrollTrigger: {
       trigger: section,
-      start: "top 80%"
+      start: "top 85%"
     }
   });
 });
