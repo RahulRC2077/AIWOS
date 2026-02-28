@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AIWOS | Artificial Intelligence Integrated with Organization Software</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #0A0F1C;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+section {
+    padding: 100px 10%;
+}
+
+h1, h2 {
+    font-weight: 800;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.hero {
+    text-align: center;
+    padding-top: 150px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 30px;
+    background: #00f2ff;
+    color: #000;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    box-shadow: 0 0 20px #00f2ff;
+    transform: translateY(-3px);
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 30px;
+    transition: 0.3s ease;
+    border: 1px solid rgba(0, 242, 255, 0.2);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(0, 242, 255, 0.4);
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    opacity: 0.6;
+    font-size: 0.9rem;
+}
+</style>
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<section class="hero">
+    <h1>Integrating Intelligence Into Every System</h1>
+    <p>AIWOS builds scalable, production-grade AI systems embedded directly into organizational software.</p>
+    <a href="#cases" class="btn">Explore Our Systems</a>
+</section>
+
+<section>
+    <h2>The Problem</h2>
+    <div class="card-container">
+        <div class="card">AI remains stuck in demo environments.</div>
+        <div class="card">Organizations lack production AI expertise.</div>
+        <div class="card">Security and cost control issues.</div>
+        <div class="card">Disconnected AI tools with no integration.</div>
+    </div>
+</section>
+
+<section>
+    <h2>Our Solution</h2>
+    <p>AIWOS architects AI-native systems where intelligence is foundational, scalable, secure, and cost-optimized.</p>
+</section>
+
+<section>
+    <h2>Core Capabilities</h2>
+    <div class="card-container">
+        <div class="card">AI Integration (LLMs + Generative Models)</div>
+        <div class="card">Full-Stack AI SaaS Development</div>
+        <div class="card">Secure Auth & Role Systems</div>
+        <div class="card">Cloud-Native Infrastructure</div>
+        <div class="card">AI Analytics & Automation</div>
+        <div class="card">Cost-Optimized AI Architecture</div>
+    </div>
+</section>
+
+<section id="cases">
+    <h2>Case Study 1 – Nythic AI</h2>
+    <div class="card">
+        AI-powered EdTech platform for Karnataka SSLC students. Curriculum-bound AI tutor, quizzes, flashcards, analytics, parent reporting, role-based security. Built using React, Supabase, Gemini AI.
+    </div>
+</section>
+
+<section>
+    <h2>Case Study 2 – BYTRAS (AI Design Commerce)</h2>
+    <div class="card">
+        AI-powered modular furniture e-commerce platform. AI design studio with prompt-based image generation, dynamic pricing engine, persistent cart, milestone-based payments, admin control system.
+    </div>
+</section>
+
+<section>
+    <h2>Case Study 3 – BYTRAS (AI Operational Engine)</h2>
+    <div class="card">
+        Scalable backend automation with AI-assisted inventory optimization, order workflow automation, milestone tracking dashboards, customer lifecycle analytics, and modular cloud architecture.
+    </div>
+</section>
+
+<section>
+    <h2>Technology Architecture</h2>
+    <div class="card-container">
+        <div class="card">Frontend: React + TypeScript</div>
+        <div class="card">Backend: Supabase + PostgreSQL</div>
+        <div class="card">AI Gateway Integration</div>
+        <div class="card">Cloud Storage & Edge Functions</div>
+    </div>
+</section>
+
+<section>
+    <h2>Vision</h2>
+    <p>AIWOS enables organizations to evolve from software-driven to intelligence-driven systems.</p>
+</section>
+
+<footer>
+    © 2026 AIWOS | Artificial Intelligence Integrated with Organization Software
+</footer>
+
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    size: { value: 3 },
+    color: { value: "#00f2ff" },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#00f2ff",
+      opacity: 0.4,
+      width: 1
+    },
+    move: { enable: true, speed: 2 }
+  }
+});
+
+gsap.utils.toArray("section").forEach(section => {
+  gsap.from(section, {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    scrollTrigger: {
+      trigger: section,
+      start: "top 80%"
+    }
+  });
+});
+</script>
+
+</body>
+</html>
